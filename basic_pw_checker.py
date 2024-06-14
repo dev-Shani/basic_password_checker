@@ -1,7 +1,9 @@
 import time
 
 def timeout(t):
-  print("Too many incorrect tries.")
+  '''
+  Causes program to pause for t seconds and prints countdown timer.
+  '''
   while t:
     if t == 1:
       print("Please wait 1 second.", end="\r")
@@ -24,6 +26,7 @@ while entered_password != user_password:
       entered_password = input(f"Incorrect password. 1 try remaining. Please try again: ")
       incorrect_password_counter += 1
   else:
+    print("Too many incorrect tries.")
     timeout(10)
     incorrect_password_counter = 0
     entered_password = input("Please enter your password: ")
