@@ -1,4 +1,4 @@
-import time
+from time import sleep
 
 def timeout(t):
   '''
@@ -8,11 +8,11 @@ def timeout(t):
     if t == 1:
       print("Please wait 1 second.", end="\r")
       t -= 1
-      time.sleep(1)
+      sleep(1)
     else:
       print(f"Please wait {t} seconds.", end="\r")
       t -= 1
-      time.sleep(1)
+      sleep(1)
 
 user_password = "PW1243"
 incorrect_password_counter = 0
